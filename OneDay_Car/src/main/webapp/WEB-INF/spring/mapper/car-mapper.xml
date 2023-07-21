@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.addong.car.dao.CarDao">
+ 
+	<insert id="insert">
+		INSERT INTO tbl_car (
+		c_div, c_sdate, c_stime, c_sdist, c_edate, c_etime, c_edist, c_location, c_cost )
+		VALUES(
+		#{c_div}, CURDATE(), CURTIME(), #{c_sdist}, CURDATE(), 
+		CURTIME(), #{c_edist}, #{c_location}, #{c_cost})
+	</insert>
+	<update id="update">
+
+	</update>
+ </mapper> 
